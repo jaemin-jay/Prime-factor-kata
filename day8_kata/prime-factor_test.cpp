@@ -1,10 +1,15 @@
 #include "gmock/gmock.h"
 #include "prime-factor.cpp"
 
-TEST(PrimeFactors, PrimeTest) {
-	EXPECT_EQ(1, 1);
-}
+#include <vector>
 
+
+TEST(PrimeFactors, Of1) {
+	PrimeFactor prime_factor;
+	std::vector<int> expected = {};
+
+	EXPECT_EQ(expected, prime_factor.of(1));
+}
 
 int main() {
 	::testing::InitGoogleMock();
